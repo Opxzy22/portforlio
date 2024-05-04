@@ -1,17 +1,17 @@
 import { faReact, faGit, faDocker,
   faHtml5, faCss3Alt, } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import nginxLogo from './Image/nginx-icon.png';
-import ApacheLogo from './Image/apache-logo.jpg';
-import PythonLogo from './Image/python-logo.jpg';
-import FlaskLogo from './Image/flask-logo.png';
-import NodeLogo from './Image/node-logo.png';
-import DjangoLogo from './Image/django-logo.png';
-import ExpressLogo from './Image/express-logo.png';
-import MongoLogo from './Image/mongodb-logo.png';
-import MysqlLogo from './Image/mysql-logo.png';
-import JsLogo from './Image/javascript-logo.png';
-import './logo.css'
+import nginxLogo from '../Image/nginx-icon.png';
+import ApacheLogo from '../Image/apache-logo.jpg';
+import PythonLogo from '../Image/python-logo.jpg';
+import FlaskLogo from '../Image/flask-logo.png';
+import NodeLogo from '../Image/node-logo.png';
+import DjangoLogo from '../Image/django-logo.png';
+import ExpressLogo from '../Image/express-logo.png';
+import MongoLogo from '../Image/mongodb-logo.png';
+import MysqlLogo from '../Image/mysql-logo.png';
+import JsLogo from '../Image/javascript-logo.png';
+import '../CSS/logo.css'
 
 
 function DisplayLogo({ handleItemHover, handleItemLeave, brightnessMode }) {

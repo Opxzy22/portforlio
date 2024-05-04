@@ -120,7 +120,7 @@ body {
   padding: 70px;
   margin-left: 100px;
   padding-right: 500px;
-  background-image: url('Image/sitting-man.jpg');
+  background-image: url('../Image/sitting-man.jpg');
   padding-bottom: 200px;
   background-size: contain;
   background-position: center;

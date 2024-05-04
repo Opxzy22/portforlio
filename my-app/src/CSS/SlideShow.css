@@ -1,7 +1,3 @@
-@font-face {
-    font-family: 'MyScriptFont';
-    src: url('./fonts/MyScriptFont.ttf') format('truetype');
-  }
 .display-word {
     font-weight: bolder;
     font-size: 30px;

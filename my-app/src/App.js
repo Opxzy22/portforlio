@@ -1,5 +1,5 @@
-import './App.css';
-import SlideShow from './SlideShow';
+import './CSS/App.css';
+import SlideShow from './Components/SlideShow';
 import { Fade } from 'react-reveal';
 import About from './Components/about';
 import ProjectDisplay from './Components/projects';
@@ -7,7 +7,7 @@ import QuotesDemoVideo from './Components/quotesappdemo';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import DisplayLogo from './logo';
+import DisplayLogo from './Components/logo';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import brightnessLogo from './Image/brightness-icon3.png';
 import darknessLogo from './Image/darkness-icon.png';

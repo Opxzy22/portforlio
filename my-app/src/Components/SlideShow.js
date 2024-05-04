@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './SlideShow.css';
+import '../CSS/SlideShow.css';
 
 const SlideShow = () => {
   const greetings = ['Welcome', 'to', 'my', 'portfolio,', 'where', 'creativity', 'meets', 'innovation']; // Array of greeting words
