@@ -1,0 +1,163 @@
+.about {
+    display: flex;
+  }
+
+  .detail {
+    width: 45%;
+    text-align: left;
+    margin-left: 150px;
+  }
+
+  .my-name {
+    font-weight: bold;
+    font-size: 30px;
+  }
+
+  .role {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .mypic {
+    padding: 30px;
+    margin-left: 100px;
+    padding-right: 200px;
+    background-image: url('../Image/mypic.png');
+    padding-bottom: 200px;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    background-repeat: no-repeat;
+    height: 130px;
+    margin-top: 45px;
+  }
+
+  @media screen and (max-width: 1300px) {
+
+    .detail {
+        margin-left: 20px;
+        width: 60%;
+    } 
+  }
+
+  @media screen and (max-width: 1000px) {
+      .mypic {
+        margin-left: 30px;
+        margin-top: 90px;
+      }
+  }
+
+  @media screen and (max-width: 700px) {
+    .about {
+        display: block;
+    }
+
+    .detail {
+        margin-left: 50px;
+        width: 90%;
+    }
+
+    .mypics {
+        padding: 50px;
+        padding-right: 200px;
+        background-image: url('../Image/mypic.png');
+        padding-bottom: 200px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+        padding-top: 10px;
+        height: 200px;
+        margin-left: -400px;
+    }
+
+    .mypic {
+        display: none
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 768px) {
+    .detail {
+        margin-left: 50px;
+        width: 90%;
+    }
+
+    .mypics {
+        padding: 50px;
+        padding-right: 200px;
+        background-image: url('../Image/mypic.png');
+        padding-bottom: 200px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-bottom: 50px;
+        padding-top: 10px;
+        height: 200px;
+        margin-left: -480px;
+        margin-top: 15px;
+
+    }
+
+    .mypic {
+        display: none
+    }
+
+    .about {
+      margin-left: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+        .detail {
+            margin-left: 20px;
+        }
+
+        .my-name {
+            font-weight: bold;
+            font-size: 20px;
+          }
+        
+          .role {
+            font-size: 15px;
+            margin-top: 10px;
+          }
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 600px) {
+    .mypics {
+      margin-left: -225px;
+      margin-top: 20px;
+    }
+
+    .detail {
+      width: 80%
+    }
+  }
+
+  @media screen and (min-width: 376px) and (max-width: 449px) {
+    .mypics {
+      margin-left: -140px;
+      margin-top: 15px;
+
+    }
+
+    .detail {
+      width: 85%
+    }
+  }
+
+  .about {
+    margin-left: 0px;
+  }
+
+  @media screen and (max-width: 375px) {
+    .mypics {
+      margin-left: -90px;
+      margin-top: 15px;
+    }
+
+    .detail {
+      width: 79%
+    }
+}

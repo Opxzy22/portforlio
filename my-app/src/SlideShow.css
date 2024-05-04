@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'MyScriptFont';
+    src: url('./fonts/MyScriptFont.ttf') format('truetype');
+  }
+.display-word {
+    font-weight: bolder;
+    font-size: 30px;
+    font-family: 'MyScriptFont'; 
+}
+
+@media screen and (max-width: 768px) {
+  .display-word {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .display-word {
+    font-size: 13px;
+  }
+}

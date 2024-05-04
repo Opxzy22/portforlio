@@ -1,0 +1,391 @@
+.project-quotesapp {
+    display: block
+}
+.quotesapp-container {
+    display: block; 
+    width: 98%;
+    padding-right: 3px;
+    
+}
+
+.quotesapp {
+    background-image: url('../Image/loginscreen.jpg'),
+                      url('../Image/quoteapps.jpg'),
+                      url('../Image/quotescreen.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top, center top, right top;
+    padding: 50px;
+    padding-right: 305px;
+    padding-bottom: 200px;
+    margin-bottom: 0;
+    width: 100px;
+}
+
+.icon-container {
+    padding: 20px;
+    background-color: black;
+    align-items: center;
+    align-content: center;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    margin-left: 30px;
+}
+
+.project-icon-con {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+    color: white
+}
+
+.quotesapp-marketplace {
+    display: flex;
+}
+
+
+
+.quotesapp-detail p {
+    text-align: left;
+}
+
+.github-demo {
+    background-color: white;
+    padding-right: 96px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 75%;
+}
+
+.git-container {
+    display: flex;
+    width: 200px;
+    margin-left: -10px;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.github {
+    margin-top: 0px;
+    margin-left: -30px;
+    
+}
+
+.quotesvideobutton {
+    margin-left: 10px;
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border: none;
+    padding-left: 1px;
+    padding-right: 1px;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.app-details {
+    width: 120%;
+    margin-left: -10px;
+}
+
+.app-details h3 {
+    margin: auto;
+    width: 100%;
+    color: black;
+    margin-bottom: 5px;
+    border-bottom: solid 1px black;
+    align-content: center;  
+}
+
+.app-details p {
+    width: auto;
+    color: black;
+    margin: auto;
+    
+}
+
+.marketplace-container {
+    display: block; 
+    background-color: silver;
+    margin-left: 50px;
+    padding-top: -70px;
+    height: 100%;
+    margin-top: 70px;
+    width: 98%;
+    padding-right: 210px;
+}
+
+.marketplace {
+    background-image: url('../Image/marketplace.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 50px;
+    padding-right: 305px;
+    padding-bottom: 160px;
+    margin-bottom: 0;
+    width: 100px;
+}
+
+.marketplace-demo {
+    background-color: white;
+    padding-right: 254px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    width: 75%;
+}
+
+.market-details {
+    width: 100%;
+    margin-left: -10px;
+    padding-right: 200px;
+}
+
+.market-details h3 {
+    margin: auto;
+    width: 230%;
+    color: black;
+    margin-bottom: 5px;
+    border-bottom: solid 1px black;
+}
+
+.market-details p {
+    width: 230%;
+    color: black;
+    margin: auto;
+}
+.ecommerce-container {
+    display: block;
+    margin-top: 20px;
+    width: 98%;
+    padding-right: 214px;
+}
+
+.progress {
+    width: auto;
+    color: red;
+    margin-top: 100px; 
+}
+
+.e-commerce {
+    background-image: url('../Image/ecommerceapp.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px;
+    padding-right: 305px;
+    padding-bottom: 200px;
+    margin-bottom: 0;
+    width: 100px;
+}
+
+.ecommerce-details {
+    width: 455px;
+    background-color: white;
+    margin-top: -18px;
+    padding-bottom: 20px;
+}
+
+.ecommerce-details h3 {
+    color: black;
+    border-bottom: solid 1px;
+    width: 405px;
+    margin-left: 10px;
+}
+
+.ecommerce-details h2 {
+    color: gray;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+
+@media screen and (max-width: 344px) {
+    .quotesapp-container {
+        margin-left: -20px;
+    }
+
+    .marketplace-container {
+        margin-left: -37px;
+        margin-top: 20px;
+    }
+
+    .quotesapp-marketplace {
+        margin-left: -60px;
+    }
+
+    .projects {
+        margin-left: -40px;
+    }
+
+    .project-icon-con {
+        margin-left: -25px;
+    }
+}
+
+@media screen and (min-width: 345px) and (max-width: 600px) {
+    
+
+    .marketplace-container {
+        margin-left: -95px;
+        margin-top: 20px;
+    }
+    .quotesapp-container {
+        margin-left: -80px;
+    }
+
+    .projects {
+        margin-left: -30px;
+    }
+
+    .project-icon-con {
+        margin-left: -80px;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    .quotesapp-marketplace {
+        display: block;
+       
+    }
+
+    .quotesapp {
+        background-image: url('../Image/loginscreen.jpg'),
+                          url('../Image/quoteapps.jpg');                      
+    }
+
+    .project-quotesapp {
+        margin-left: -15px;
+    }
+
+    .github-demo {
+        width: 206px
+    }
+
+    .app-details {
+        width: 140%;
+    }
+
+    
+
+    .marketplace {
+        background-image: url('../Image/marketplace.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 50px;
+        padding-right: 205px;
+        padding-bottom: 100px;
+        margin-bottom: 0;
+        width: 70px
+    }
+
+    .market-details {
+        width: 130px;
+    }
+
+    .marketplace-demo {
+        padding-left: 20px;
+        padding-bottom: 10px;
+        width: 50px;
+    }
+
+    .ecommerce-container {
+        margin-left: -95px;
+    }
+
+    .e-commerce {
+        width: 0px;
+        background-size: contain;
+    }
+
+    .ecommerce-details {
+        width: 333px
+    }
+
+    .ecommerce-details h3 {
+        width: 310px
+    }
+
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+    .marketplace-container {
+        margin-left: -0px;
+    }
+    .quotesapp-marketplace {
+        display: block;
+        margin-left: -110px;
+    }
+
+    .marketplace-demo {
+        padding-right: 350px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        width: 75%;
+    }
+
+    .market-details {
+        width: 180px;
+    }
+
+    .github-demo {
+        padding-right: 352px;
+    }
+
+    .app-details {
+        width: 420px
+    }
+
+    .ecommerce-container {
+        margin-left: -100px;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1000px) {
+    .projects {
+        margin-left: 110px;
+    }
+
+    .marketplace-container {
+        margin-left: 10px;
+    }
+
+    .quotesapp-container {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1300px) {
+    .marketplace-container {
+        margin-left: 15px;
+    }
+    .quotesapp-marketplace {
+        margin-left: 15px;
+    }
+
+    .market-details {
+        width: 180px;
+    }
+
+    .marketplace-demo {
+        padding-right: 258px;
+    }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1100px) {
+    .marketplace-demo {
+        padding-right: 408px;
+    }
+
+    .market-details {
+        width: 180px
+    }
+}

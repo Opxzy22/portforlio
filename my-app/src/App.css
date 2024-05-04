@@ -1,0 +1,440 @@
+/* App.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  position: relative; 
+  width: 100vw;
+  height: 100%;
+ /* background-image: url(Image/galaxy4.jpg);*/
+  background-color: #0F3057;
+  color: silver;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.App.dark-mode {
+  background-color:aliceblue;
+  color: black;
+  background-image: none;
+}
+
+.cursor-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  border: solid 2px silver;
+  pointer-events: none; /* Ensure the circle does not interfere with mouse events */
+  z-index: 9999; /* Ensure the circle is above other elements */
+}
+
+.cursor-circle.dark-mode {
+  border: solid 2px black;
+}
+
+.cursor-circle.expanded {
+  width: 70px; /* Adjust the size as needed */
+  height: 70px; /* Adjust the size as needed */
+}
+
+.hovered-item {
+  position: absolute;
+  top: calc(var(--cursor-y) + 50px); /* Adjust the distance from the circle */
+  left: calc(var(--cursor-x) - 0%);
+  transform: translateX(-50%);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  pointer-events: none;
+  z-index: 999; /* Ensure the title is above other elements */
+}
+
+.icon {
+  font-size: 30px;
+  margin-left: 30px;
+  margin-top: 40px;
+}
+
+.App header {
+  padding: 25px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #16213E;
+  border-bottom: solid 0.5px silver; 
+  width: 100%;
+}
+
+.darkness-logo, .brightness-logo {
+  width: 25px;
+  margin-right: 50px;
+}
+
+.about-profile {
+  margin-right: -400px;
+}
+
+.App.dark-mode header {
+  background-color: #DFD3D3;
+  border-bottom: solid 0.5px black;
+}
+
+.Container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.details-container {
+  margin-top: 100px;
+  margin-right: 800px;
+  display: flex;
+  width: 100%;
+  padding-bottom: 150px;
+}
+
+.my-name {
+  margin-bottom: -5px;
+}
+
+.contact-details {
+  margin-top: -40px;
+  margin-bottom: -10px;
+  margin-left: -20px;
+}
+
+.slide-display {
+  margin-top: 20px;
+  color: white
+}
+
+.slide-display.dark-mode {
+  color: #272121
+}
+
+.display-img {
+  padding: 70px;
+  margin-left: 100px;
+  padding-right: 500px;
+  background-image: url('Image/sitting-man.jpg');
+  padding-bottom: 200px;
+  background-size: contain;
+  background-position: center;
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.name-link {
+  margin-left: 150px;
+}
+
+.skills {
+  margin-top: 200px;
+  display: block;
+  margin-left: 150px;
+  text-align: left;
+}
+
+.title-icon {
+  width: 30px;
+  margin-right: 5px;
+  height: 30px;
+}
+
+.icon-con {
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+}
+
+.brightness-icon {
+  background-color: 'silver'; 
+}
+
+.logo-display {
+  display: flex;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-link {
+  margin-right: 450px;
+  font-weight: bold;
+  color: whitesmoke;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.about-link.dark-mode {
+  color: black;
+  font-weight: bold;
+  cursor: pointer
+}
+
+.profile-link {
+  margin-right: 20px;
+  font-weight: bold;
+  color: whitesmoke;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.profile-link.dark-mode {
+  color: black;
+  font-weight: bold;
+  cursor: pointer
+}
+
+.projects {
+  margin-top: 200px;
+  margin-right: 970px
+}
+
+.menu {
+  display: none;
+}
+
+.education-icon-con {
+  display: flex;
+  align-items: center;
+  margin-left: 140px;
+  margin-bottom: -20px;
+}
+
+.education-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.education-comp {
+  margin-top: 100px;
+}
+
+.footer {
+  padding: 80px;
+  background-color: #16213E;
+  margin-top: 100px;
+  width: 100%;
+  border-top: solid 0.5px silver;
+  display: inline-block;
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer.dark-mode {
+  background-color: azure;
+  color: black
+}
+
+.footer-contact-details {
+  margin-top: -25px;
+  margin-left: -170px;
+}
+
+.copyright {
+  margin-top: 20px;
+  margin-left: -130px;
+}
+
+@media screen and (max-width: 768px) {
+  .details-container {
+    display: block;
+  }
+
+  .name-link {
+    margin-left: -200px;
+    margin-bottom: 40px;
+  }
+
+  .display-i {
+    margin-left: 100px;
+  }
+
+  .icon-con {
+    margin-left: -122px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  
+
+  .display-img {
+    padding: 100px;
+    margin-left: 30px;
+    padding-right: 50px;
+    width: 200px;
+  }
+
+  .name-link {
+    margin-top: -30px;
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1000px) {
+    .details-container {
+      margin-left: -125px;
+    }
+
+    .skills {
+      margin-left: 20px;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+  .details-container {
+    display: block;
+  }
+
+  .darkness-logo, .brightness-logo {
+    margin-right: 20px;
+    height: 21px;
+  }
+
+  .name-link {
+    margin-left: -70px;
+    margin-bottom: 40px;
+  }
+
+  .display-img {
+    padding: 100px;
+    margin-left: -90px;
+    padding-right: 10px;
+    width: 200px;
+  }
+
+  .contact-details {
+    margin-left: 41px;
+  }
+
+  .about-link {
+    font-size: 12px;
+  }
+
+  .profile-link {
+    margin-right: 7px;
+    font-size: 12px;
+  }
+
+  .hamburger-menu {
+    cursor: pointer;
+    margin-right: 50px;
+  }
+  
+  .hamburger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: silver;
+    margin: 5px 0;
+  }
+
+  .hamburger-bar.dark-mode {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+  }
+  
+  
+  /* Dropdown menu styles */
+  .menu {
+    position: fixed;
+    top: 80px;
+    height: 100vh;
+    width: 285px; /* Adjust as needed */
+    transition: transform 0.9s ease; /* Add smooth transition for transform property */
+    transform: translateX(100%); /* Move the menu off-screen to the right */
+    display: block;
+    left: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    text-align: left;
+    z-index: 9999;
+    padding-left: 120px;
+    background-color: #0F3057;
+    color: white;
+  }
+
+  .menu.dark-mode {
+    background-color: white;
+    color: black
+  }
+  
+  .menu.open {
+    display: block;
+    transform: translateX(0); 
+    font-weight: bold;
+    background-color: #0F3057;
+    color: white;
+  }
+  
+  .menu-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .menu.dark-mode {
+    background-color: white; /* Adjust as needed */
+    color: black; /* Adjust as needed */
+  }
+
+  .menu-item {
+    margin-left: -100px;
+    margin-bottom: 10px;
+  }
+
+  .about-profile {
+    display: none;
+  }
+
+  .icon-con {
+    margin-left: -135px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .display-img {
+    margin-left: -50px;
+  }
+
+  .skills {
+    margin-left: 140px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .display-img {
+    margin-left: -85px;
+  }
+
+  .skills {
+    margin-left: 140px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .cursor-circle {
+    display: none
+  }
+
+  .education-icon-con {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .skills {
+    margin-left: 20px;
+  }
+}
+
