@@ -27,7 +27,7 @@ function About() {
             learning and a collaborative mindset, I thrive in dynamic environments where 
             innovation and creativity are valued.
             </p>
-            <p className={`extended-part ${isextended ? 'hidden' : 'visible'}`}>
+            <p className={`extended-part ${isextended ? 'visible' : 'hidden'}`}>
               During my one-year software engineering program at Alx, I underwent intensive 
               training aimed at tackling challenging tasks. This experience has ingrained 
               in me the belief that overcoming difficulties is an integral part of everyday 
@@ -46,7 +46,7 @@ function About() {
               explore unconventional solutions. This approach to software engineering has equipped me with a 
               versatile skill set, ready to tackle any challenge that comes my way.
             </p>
-            <button className='extend-button' onclick={toggleExtend}>{`${isextended ? 'READ MORE' : 'SHOW LESS'}`}</button>
+            <button className='extend-button' onClick={toggleExtend}>{`${isextended ? 'SHOW LESS' : 'READ MORE'}`}</button>
 
           </Fade>
           </div>

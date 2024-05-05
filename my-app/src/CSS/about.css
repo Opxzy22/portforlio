@@ -33,6 +33,10 @@
     margin-top: 45px;
   }
 
+  .extended-part.hidden {
+    display: none;
+  }
+
   @media screen and (max-width: 1300px) {
 
     .detail {
