@@ -181,7 +181,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px;
-    padding-right: 305px;
+    padding-right: 300px;
     padding-bottom: 200px;
     margin-bottom: 0;
     width: 100px;
@@ -230,7 +230,7 @@
     }
 }
 
-@media screen and (min-width: 345px) and (max-width: 600px) {
+@media screen and (min-width: 345px) and (max-width: 767px) {
     
 
     .marketplace-container {
@@ -349,7 +349,7 @@
     }
 }
 
-@media screen and (min-width: 820px) and (max-width: 1000px) {
+@media screen and (min-width: .770px) and (max-width: 1000px) {
     .projects {
         margin-left: 110px;
     }

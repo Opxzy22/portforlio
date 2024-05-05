@@ -74,7 +74,7 @@
 @media screen and (min-width: 360px) and (max-width: 700px) {
     .education-container {
         margin-left: 15px;
-        width: 340px;
+        width: 320px;
     }
 
     .education-title {
@@ -89,7 +89,7 @@
 @media screen and (max-width: 359px) {
     .education-container {
         margin-left: 15px;
-        width: 300px;
+        width: 290px;
     }
 
     .education-title {

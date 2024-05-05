@@ -150,6 +150,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: -10px;
+  width: 300px
 }
 
 .brightness-icon {
@@ -279,7 +280,7 @@ body {
   }
 }
 
-@media screen and (min-width: 820px) and (max-width: 1000px) {
+@media screen and (min-width: 770px) and (max-width: 1000px) {
     .details-container {
       margin-left: -125px;
     }
@@ -351,9 +352,9 @@ body {
     position: fixed;
     top: 80px;
     height: 100vh;
-    width: 285px; /* Adjust as needed */
+    width: 100%; /* Adjust as needed */
     transition: transform 0.9s ease; /* Add smooth transition for transform property */
-    transform: translateX(100%); /* Move the menu off-screen to the right */
+    transform: translateX(125%); /* Move the menu off-screen to the right */
     display: block;
     left: 0;
     justify-content: flex-start;
@@ -402,7 +403,7 @@ body {
   }
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 580px) {
   .display-img {
     margin-left: -50px;
   }
@@ -425,6 +426,10 @@ body {
 @media screen and (max-width: 1300px) {
   .cursor-circle {
     display: none
+  }
+
+  .hovered-item {
+    display: none;
   }
 
   .education-icon-con {

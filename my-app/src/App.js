@@ -45,7 +45,9 @@ function App() {
     if (title) {
       setHoveredItem(title);
       const circle = document.querySelector('.cursor-circle');
-      circle.classList.add('expanded');
+      if (window.innerWidth > 768) { 
+        circle.classList.add('expanded');
+      }
     }
   };
   
