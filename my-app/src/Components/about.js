@@ -46,7 +46,7 @@ function About() {
               explore unconventional solutions. This approach to software engineering has equipped me with a 
               versatile skill set, ready to tackle any challenge that comes my way.
             </p>
-            <button className='extend-button'>{`${isextended ? 'READ MORE' : 'SHOW LESS'}`}</button>
+            <button className='extend-button' onclick={toggleExtend}>{`${isextended ? 'READ MORE' : 'SHOW LESS'}`}</button>
 
           </Fade>
           </div>
