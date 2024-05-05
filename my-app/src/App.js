@@ -5,8 +5,8 @@ import About from './Components/about';
 import ProjectDisplay from './Components/projects';
 import QuotesDemoVideo from './Components/quotesappdemo';
 import { useState, useEffect } from 'react';
-
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import DisplayLogo from './Components/logo';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import brightnessLogo from './Image/brightness-icon3.png';
@@ -70,7 +70,7 @@ function App() {
         onMouseEnter={() => handleItemHover('Github')}
         onMouseLeave={handleItemLeave}
       >
-        
+        <FontAwesomeIcon icon={faGithub} className='icon' style={{ color: brightnessMode ? 'black' : 'white' }} />
       </a>
     );
   };
@@ -84,7 +84,7 @@ function App() {
         onMouseEnter={() => handleItemHover('LinkedIn')}
         onMouseLeave={handleItemLeave}
       >
-         
+         <FontAwesomeIcon className='icon' icon={faLinkedin} style={{ color: '#0077B5' }} />
         </a>
     );
   };
@@ -98,7 +98,7 @@ function App() {
         onMouseEnter={() => handleItemHover('Twitter')}
         onMouseLeave={handleItemLeave}
       >
-         
+         <FontAwesomeIcon className='icon' icon={faTwitter} style={{ color: '#0077B5' }} />
         </a>
     );
   };
@@ -112,7 +112,7 @@ function App() {
         onMouseEnter={() => handleItemHover('Instagram')}
         onMouseLeave={handleItemLeave}
       >
-         
+         <FontAwesomeIcon className='icon' icon={faInstagram} style={{ color: 'purple' }} />
         </a>
     );
   };
@@ -126,7 +126,7 @@ function App() {
         onMouseEnter={() => handleItemHover('WhatsApp')}
         onMouseLeave={handleItemLeave}
       >
-         
+         <FontAwesomeIcon className='icon' icon={faWhatsapp} style={{ color: 'green'}} />
         </a>
     );
   };

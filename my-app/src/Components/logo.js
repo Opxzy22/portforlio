@@ -1,4 +1,6 @@
-
+import { faReact, faGit, faDocker,
+  faHtml5, faCss3Alt, } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import nginxLogo from '../Image/nginx-icon.png';
 import ApacheLogo from '../Image/apache-logo.jpg';
 import PythonLogo from '../Image/python-logo.jpg';
@@ -48,7 +50,11 @@ function DisplayLogo({ handleItemHover, handleItemLeave, brightnessMode }) {
             <img src={MongoLogo} alt="mongodb Logo" title='Mongodb' />
           </div>
 
-        
+        <FontAwesomeIcon icon={faReact} style={{ color: 'blue' }} /> 
+        <FontAwesomeIcon icon={faHtml5} style={{ color: 'red' }} />
+        <FontAwesomeIcon icon={faCss3Alt} style={{ color: 'blue' }} />
+        <FontAwesomeIcon icon={faGit} style={{ color: brightnessMode ? 'black' : 'white' }} title='Git' />
+        <FontAwesomeIcon icon={faDocker} style={{ color: '#30A2FF' }} />
         <div className='image-container'>
         <img src={nginxLogo} alt="Nginx Logo" title='nginx' />
         </div>
