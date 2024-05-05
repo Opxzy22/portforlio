@@ -27,7 +27,7 @@ function About() {
             learning and a collaborative mindset, I thrive in dynamic environments where 
             innovation and creativity are valued.
             </p>
-            <p className={`extended-part ${isextended ? 'show-extended' : 'hide-extended'}`}>
+            <p className={`extended-part ${isextended ? 'hidden' : 'visible'}`}>
               During my one-year software engineering program at Alx, I underwent intensive 
               training aimed at tackling challenging tasks. This experience has ingrained 
               in me the belief that overcoming difficulties is an integral part of everyday 
