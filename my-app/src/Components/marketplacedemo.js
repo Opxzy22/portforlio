@@ -18,7 +18,7 @@ function marketplaceDemoVideo() {
     <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'black', zIndex: 999, overflow: 'hidden' }}>
       <div style={{ position: 'fixed', top: '30%', left: '50%', transform: 'translate(-50%, -50%)', maxWidth: '100vw', maxHeight: '100vh' }}>
         <ReactPlayer
-          url="https://youtu.be/YII-vPs1RE0"
+          url="https://youtu.be/tpOUDu5ytkg"
           controls
           width="auto"
           height="auto"

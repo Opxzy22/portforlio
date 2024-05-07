@@ -303,8 +303,9 @@ body {
   }
 
   .darkness-logo, .brightness-logo {
-    margin-right: 20px;
+    margin-right: 15px;
     height: 21px;
+    width: 22px
   }
 
   .name-link {
@@ -338,17 +339,14 @@ body {
   }
   
   .hamburger-bar {
-    width: 25px;
+    width: 22px;
     height: 3px;
     background-color: silver;
     margin: 5px 0;
   }
 
   .hamburger-bar.dark-mode {
-    width: 25px;
-    height: 3px;
     background-color: black;
-    margin: 5px 0;
   }
   
   
