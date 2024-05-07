@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import ReactPlayer from 'react-player';
 
-function marketplaceDemoVideo() {
+function MarketplaceDemoVideo() {
   useEffect(() => {
     // Add overflow: hidden to body and html to prevent scrolling
     document.body.style.overflow = 'hidden';
@@ -28,4 +28,4 @@ function marketplaceDemoVideo() {
   );
 }
 
-export default marketplaceDemoVideo;
+export default MarketplaceDemoVideo;

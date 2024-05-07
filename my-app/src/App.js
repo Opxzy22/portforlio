@@ -15,6 +15,7 @@ import skillsLogo from './Image/skills-icon.png';
 import EducationDisplay from './Components/education';
 import educationIcon from './Image/education-icon.png';
 import myLogo from './Image/my-logo.png'
+import MarketplaceDemoVideo from './Components/marketplacedemo';
 
 function App() {
   const [brightnessMode, setBrightnessMode] = useState(false);
@@ -189,6 +190,7 @@ function App() {
                                     TwitterLink={TwitterLink} 
                                     LinkedinLink={LinkedinLink} />} />
           <Route path='/quotesapp' Component={QuotesDemoVideo} />
+          <Route path='/marketplace' Component={MarketplaceDemoVideo} />
         </Routes>
         <footer className={`footer ${brightnessMode ? 'dark-mode' : ''}`} onMouseLeave={handleItemLeave}>
           <div className='footer-contact-details'>

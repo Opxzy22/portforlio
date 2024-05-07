@@ -62,7 +62,7 @@ function ProjectsDisplay() {
                     <GithubLink />
                   </a>
               </div>
-              <Link to='quotesapp'>
+              <Link to='marketplace'>
                 <button className='quotesvideobutton'>➡ Watch Demo</button>
               </Link>
             </div>
