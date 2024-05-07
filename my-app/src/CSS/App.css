@@ -259,8 +259,10 @@ body {
     margin-bottom: 40px;
   }
 
-  .display-i {
-    margin-left: 100px;
+  .display-img {
+    padding: 100px;
+    padding-right: 50px;
+    width: 200px;
   }
 
   .icon-con {
@@ -268,12 +270,12 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1000px) {
   
 
   .display-img {
     padding: 100px;
-    margin-left: 30px;
+    margin-left: 100px;
     padding-right: 50px;
     width: 200px;
   }
@@ -312,7 +314,7 @@ body {
 
   .display-img {
     padding: 100px;
-    margin-left: -90px;
+    margin-left: 50px;
     padding-right: 10px;
     width: 200px;
   }
@@ -408,7 +410,7 @@ body {
 
 @media screen and (max-width: 580px) {
   .display-img {
-    margin-left: -10px;
+    margin-left: 75px;
   }
 
   .skills {
@@ -427,7 +429,7 @@ body {
 
 @media screen and (max-width: 450px) {
   .display-img {
-    margin-left: -70px;
+    margin-left: 15px;
   }
 
   .skills {
@@ -437,7 +439,7 @@ body {
 
 @media screen and (max-width: 370px) {
   .display-img {
-    margin-left: -95px;
+    margin-left: 15px;
   }
 }
 

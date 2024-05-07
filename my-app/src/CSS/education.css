@@ -69,14 +69,14 @@
     
 }
 
-@media screen and (min-width: 701px) and (max-width: 799px) {
+@media screen and (min-width: 767px) and (max-width: 799px) {
     .education-container {
         padding-right: 100px;
         margin-left: 25px;
     }
 }
 
-@media screen and (min-width: 360px) and (max-width: 700px) {
+@media screen and (min-width: 360px) and (max-width: 766px) {
     .education-container {
         margin-left: 15px;
         width: 320px;

@@ -3,7 +3,7 @@
   }
 
   .detail {
-    width: 45%;
+    width: 60%;
     text-align: left;
     margin-left: 150px;
   }
@@ -21,7 +21,7 @@
 
   .mypic {
     padding: 30px;
-    margin-left: 100px;
+    margin-left: 0px;
     padding-right: 200px;
     background-image: url('../Image/mypic.png');
     padding-bottom: 200px;
@@ -31,7 +31,8 @@
     padding-top: 100px;
     background-repeat: no-repeat;
     height: 130px;
-    margin-top: 45px;
+    margin-top: 90px;
+    border-radius: 5px;
   }
 
   .extended-part.hidden {
@@ -41,13 +42,7 @@
   .extended-part {
     font-size: 20px;
     margin-bottom: -20px;
-  }
-
-  .extend-button {
-    margin-top: 27px;
-    font-weight: bold;
-    background-color: white;
-    color: black;
+    margin-top: 22px;
   }
 
   .extend-button {
@@ -62,22 +57,22 @@
     color: white
   }
 
-  @media screen and (max-width: 1300px) {
+  @media screen and (min-width: 1000px) and (max-width: 1300px) {
 
     .detail {
         margin-left: 20px;
-        width: 60%;
+        width: 65%;
     } 
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1300px) {
       .mypic {
         margin-left: 30px;
         margin-top: 90px;
       }
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 767px) {
     .about {
         display: block;
     }
@@ -98,7 +93,6 @@
         padding-bottom: 50px;
         padding-top: 10px;
         height: 200px;
-        margin-left: -400px;
     }
 
     .mypic {
@@ -106,9 +100,9 @@
     }
   }
 
-  @media screen and (min-width: 600px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 768px) {
     .detail {
-        margin-left: 50px;
+        margin-left: 25px;
         width: 90%;
     }
 
@@ -136,12 +130,20 @@
       margin-left: 60px;
     }
   }
-  
-  @media screen and (max-width: 600px) {
-        .detail {
-            margin-left: 20px;
-        }
 
+  @media screen and (min-width: 700px) and (max-width: 767px) {
+    .mypics {
+      margin-left: -415px;
+      margin-top: 20px;
+    }
+
+    .detail {
+      width: 85%;
+      margin-left: 15px;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
         .my-name {
             font-weight: bold;
             font-size: 20px;
@@ -164,19 +166,33 @@
     }
 
     .detail {
-      width: 80%
+      width: 80%;
+      margin-left: 15px;
     }
   }
 
-  @media screen and (min-width: 376px) and (max-width: 449px) {
+  @media screen and (min-width: 400px) and (max-width: 500px) {
     .mypics {
-      margin-left: -150px;
+      margin-left: -125px;
+      margin-top: 20px;
+    }
+
+    .detail {
+      width: 80%;
+      margin-left: 15px;
+    }
+  }
+
+  @media screen and (min-width: 390px) and (max-width: 400px) {
+    .mypics {
+      margin-left: -185px;
       margin-top: 15px;
 
     }
 
     .detail {
-      width: 90%
+      width: 90%;
+      margin-left: 15px;
     }
   }
 
@@ -184,13 +200,14 @@
     margin-left: 0px;
   }
 
-  @media screen and (max-width: 375px) {
+  @media screen and (max-width: 390px) {
     .mypics {
-      margin-left: -90px;
+      margin-left: -105px;
       margin-top: 15px;
     }
 
     .detail {
-      width: 85%
+      width: 85%;
+      margin-left: 15px;
     }
 }

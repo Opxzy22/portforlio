@@ -250,7 +250,7 @@
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 600px) {
+@media screen and (min-width: 300px) and (max-width: 767px) {
     .quotesapp-marketplace {
         display: block;
        
@@ -316,13 +316,13 @@
     
 }
 
-@media screen and (min-width: 600px) and (max-width: 820px) {
+@media screen and (min-width: 768px) and (max-width: 820px) {
     .marketplace {
        width: 87%
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 1000px) {
+@media screen and (min-width: 768px) and (max-width: 1000px) {
     .marketplace-container {
         margin-left: -0px;
     }
