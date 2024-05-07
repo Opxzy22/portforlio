@@ -179,7 +179,7 @@ function App() {
         <nav className={`menu ${menuOpen ? 'open' : ''} ${brightnessMode ? 'dark-mode' : ''}`} style={{ right: menuOpen ? '30px' : '-300px' }}>
           <div onClick={() => scrollToSection('about')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>About</div>
           <div onClick={() => scrollToSection('skills')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Skills</div>
-          <div onClick={() => scrollToSection('project')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Projects</div>
+          <div onClick={() => scrollToSection('projects')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Projects</div>
         </nav>
 
         <Routes>
@@ -250,7 +250,7 @@ function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
         <Fade>
           <div className='icon-con'>
             <img src={skillsLogo} alt='icon' className='title-icon'/>
-            <h2>Skills</h2>
+            <h2 id='skills'>Skills</h2>
           </div>
         </Fade>
         <div className='display-logo'>
@@ -258,7 +258,7 @@ function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
           <DisplayLogo handleItemHover={handleItemHover} handleItemLeave={handleItemLeave} brightnessMode={brightnessMode} />
           </Fade>
         </div>
-        <div id='projects'>
+        <div id='projects' className='projects'>
           <ProjectDisplay />
         </div>
       </div>

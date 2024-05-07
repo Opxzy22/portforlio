@@ -30,7 +30,7 @@ function ProjectsDisplay() {
               <div className='github-demo'>
                 <div className='app-details'>
                   <h3>Random quote app</h3>
-                  <p>A mobile app that randomly generates quotes. Technology used: Django for user authentication and React Native (Expo) for seamless user interface.</p>
+                  <p>A mobile app that randomly generates quotes. Technology used: Django for user authentication and React Native (Expo) for seamless and intuitive  user interface.</p>
                 </div>
                 <div className='git-container'>
                   <div className='github'>
