@@ -34,7 +34,9 @@ function ProjectsDisplay() {
                 </div>
                 <div className='git-container'>
                   <div className='github'>
+                  <a href='https://github.com/Opxzy22/RandomQuoteApp'>
                     <GithubLink />
+                  </a>
                   </div>
                   <Link to='quotesapp'>
                     <button className='quotesvideobutton'>➡ Watch Demo</button>
@@ -56,7 +58,9 @@ function ProjectsDisplay() {
             </div>
             <div className='git-container'>
               <div className='github'>
-                <GithubLink />
+                  <a href='https://github.com/Opxzy22/market_place/tree/main'>
+                    <GithubLink />
+                  </a>
               </div>
               <Link to='quotesapp'>
                 <button className='quotesvideobutton'>➡ Watch Demo</button>

@@ -45,9 +45,7 @@ function App() {
     if (title) {
       setHoveredItem(title);
       const circle = document.querySelector('.cursor-circle');
-      if (window.innerWidth > 768) { 
-        circle.classList.add('expanded');
-      }
+      circle.classList.add('expanded');
     }
   };
   
@@ -72,7 +70,7 @@ function App() {
         onMouseEnter={() => handleItemHover('Github')}
         onMouseLeave={handleItemLeave}
       >
-        <FontAwesomeIcon icon={faGithub} className='icon' style={{ color: brightnessMode ? 'black' : 'white' }} />
+        <FontAwesomeIcon icon={faGithub} className='icon' style={{ color: brightnessMode ? 'black' : 'white' }} onMouseLeave={handleItemLeave} />
       </a>
     );
   };
@@ -80,13 +78,13 @@ function App() {
   const LinkedinLink = () => {
     return (
       <a
-        href="https://github.com/opxzy22"
+        href="https://www.linkedin.com/in/adeyemi-opeyemi/"
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => handleItemHover('LinkedIn')}
         onMouseLeave={handleItemLeave}
       >
-         <FontAwesomeIcon className='icon' icon={faLinkedin} style={{ color: '#0077B5' }} />
+         <FontAwesomeIcon className='icon' icon={faLinkedin} style={{ color: '#0077B5' }} onMouseLeave={handleItemLeave} />
         </a>
     );
   };
@@ -100,7 +98,7 @@ function App() {
         onMouseEnter={() => handleItemHover('Twitter')}
         onMouseLeave={handleItemLeave}
       >
-         <FontAwesomeIcon className='icon' icon={faTwitter} style={{ color: '#0077B5' }} />
+         <FontAwesomeIcon className='icon' icon={faTwitter} style={{ color: '#0077B5' }} onMouseLeave={handleItemLeave} />
         </a>
     );
   };
@@ -108,13 +106,13 @@ function App() {
   const InstagramLink = () => {
     return (
       <a
-        href="https://github.com/opxzy22"
+        href="https://www.instagram.com/opxzy007"
         target="_blank"
         rel="noopener noreferrer"
         onMouseEnter={() => handleItemHover('Instagram')}
         onMouseLeave={handleItemLeave}
       >
-         <FontAwesomeIcon className='icon' icon={faInstagram} style={{ color: 'purple' }} />
+         <FontAwesomeIcon className='icon' icon={faInstagram} style={{ color: 'purple' }} onMouseLeave={handleItemLeave} />
         </a>
     );
   };
@@ -122,24 +120,23 @@ function App() {
   const WhatsappLink = () => {
     return (
       <a
-        href="https://github.com/opxzy22"
+        href="https://wa.link/178cy6"
         target="_blank"
         rel="noopener noreferrer"
-        onMouseEnter={() => handleItemHover('WhatsApp')}
+        onMouseEnter={() => handleItemHover('Whatsapp')}
         onMouseLeave={handleItemLeave}
       >
-         <FontAwesomeIcon className='icon' icon={faWhatsapp} style={{ color: 'green'}} />
+         <FontAwesomeIcon className='icon' icon={faWhatsapp} style={{ color: 'green'}} onMouseLeave={handleItemLeave} />
         </a>
     );
   };
   
   return (
     <Router>
-      <div className={`App ${brightnessMode ? 'dark-mode' : ''}`}>
-        <header className='App-header'>
+      <div className={`App ${brightnessMode ? 'dark-mode' : ''}`} onMouseLeave={handleItemLeave}>
+        <header className='App-header' onMouseLeave={handleItemLeave}>
           <div className='header-content'>
-            <div className='about-profile' onMouseEnter={() => handleItemHover('WhatsApp')}
-        onMouseLeave={handleItemLeave} >
+            <div className='about-profile' onMouseLeave={handleItemLeave} >
               <a href='#home' className={`profile-link ${brightnessMode ? 'dark-mode' : ''}`}
                onMouseEnter={() => handleItemHover('home')}>Home</a>
               <a href='#projects' className={`profile-link ${brightnessMode ? 'dark-mode' : ''}`}
@@ -189,7 +186,7 @@ function App() {
                                     LinkedinLink={LinkedinLink} />} />
           <Route path='/quotesapp' Component={QuotesDemoVideo} />
         </Routes>
-        <footer className={`footer ${brightnessMode ? 'dark-mode' : ''}`}>
+        <footer className={`footer ${brightnessMode ? 'dark-mode' : ''}`} onMouseLeave={handleItemLeave}>
           <div className='footer-contact-details'>
             <GithubLink />
             <LinkedinLink />
@@ -209,7 +206,7 @@ export default App;
 function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
                     GithubLink, TwitterLink, InstagramLink, WhatsappLink, LinkedinLink }) {
   return (
-    <div className={`Container ${brightnessMode ? 'dark-mode' : ''}`} id='home'>
+    <div className={`Container ${brightnessMode ? 'dark-mode' : ''}`} id='home' onMouseLeave={handleItemLeave}>
       <div className={`slide-display ${brightnessMode ? 'dark-mode' : ''}`}>
         <SlideShow />
       </div>
@@ -234,7 +231,7 @@ function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
         </div>
       </div>
       <div id='about'>
-        <About />
+        <About brightnessMode={brightnessMode} />
       </div>
       <div className='education-comp'>
         <div className='education-icon-con'>

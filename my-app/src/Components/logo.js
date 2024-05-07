@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { faReact, faGit, faDocker,
   faHtml5, faCss3Alt, } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,16 +12,27 @@ import ExpressLogo from '../Image/express-logo.png';
 import MongoLogo from '../Image/mongodb-logo.png';
 import MysqlLogo from '../Image/mysql-logo.png';
 import JsLogo from '../Image/javascript-logo.png';
+import ReactNativeLogo from '../Image/react-native-logo.png';
 import '../CSS/logo.css'
 
 
 function DisplayLogo({ handleItemHover, handleItemLeave, brightnessMode }) {
+  const [clickedItem, setClickedItem] = useState('');
+
+  const handleItemClick = (title) => {
+    setClickedItem(title);
+  };
+
+  const handleDocumentClick = () => {
+    setClickedItem('');
+  };
    
     return (
-        <div className='logo-container'>
+      <div className='logo-container' onClick={handleDocumentClick}>
           <div className='image-container'>
-            <img src={JsLogo} alt="javascript Logo" title='Javascript' />
-          </div>
+            <img src={JsLogo} alt="javascript Logo" title='Javascript' onClick={() => handleItemClick('Javascript')} />
+            <span className='image-title'>{(clickedItem) === 'Javascript' ? 'Javascript' : ''}</span>
+      </div>
 
           <div className='image-container'>
             <img src={PythonLogo} alt="python Logo" title='Python' />
@@ -51,10 +63,13 @@ function DisplayLogo({ handleItemHover, handleItemLeave, brightnessMode }) {
           </div>
 
         <FontAwesomeIcon icon={faReact} style={{ color: 'blue' }} /> 
-        <FontAwesomeIcon icon={faHtml5} style={{ color: 'red' }} />
-        <FontAwesomeIcon icon={faCss3Alt} style={{ color: 'blue' }} />
+        <div className='image-container'>
+            <img src={ReactNativeLogo} alt="Logo" title='React native' />
+          </div>
+        <FontAwesomeIcon icon={faHtml5} style={{ color: 'red' }} title='HTML'/>
+        <FontAwesomeIcon icon={faCss3Alt} style={{ color: 'blue' }} title='CSS'/>
         <FontAwesomeIcon icon={faGit} style={{ color: brightnessMode ? 'black' : 'white' }} title='Git' />
-        <FontAwesomeIcon icon={faDocker} style={{ color: '#30A2FF' }} />
+        <FontAwesomeIcon icon={faDocker} style={{ color: '#30A2FF' }} title='Docker' />
         <div className='image-container'>
         <img src={nginxLogo} alt="Nginx Logo" title='nginx' />
         </div>

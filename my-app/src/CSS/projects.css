@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-position: left top, center top, right top;
     padding: 50px;
-    padding-right: 305px;
+    padding-right: 300px;
     padding-bottom: 200px;
     margin-bottom: 0;
     width: 100px;
@@ -101,7 +101,7 @@
 .app-details h3 {
     margin: auto;
     width: 100%;
-    color: #0F3057;
+    color: black;
     margin-bottom: 5px;
     border-bottom: solid 1px black;
     align-content: center;  
@@ -153,7 +153,7 @@
 .market-details h3 {
     margin: auto;
     width: 230%;
-    color: #0F3057;
+    color: black;
     margin-bottom: 5px;
     border-bottom: solid 1px black;
 }
@@ -172,7 +172,7 @@
 
 .progress {
     width: auto;
-    color: red;
+    color: black;
     margin-top: 100px; 
 }
 
@@ -188,7 +188,7 @@
 }
 
 .ecommerce-details {
-    width: 455px;
+    width: 450px;
     background-color: silver;
     margin-top: -18px;
     padding-bottom: 20px;
@@ -202,7 +202,7 @@
 }
 
 .ecommerce-details h2 {
-    color: #4F8A8B;
+    color: black;
     margin-left: 10px;
     margin-bottom: -10px;
 }
@@ -258,7 +258,9 @@
 
     .quotesapp {
         background-image: url('../Image/loginscreen.jpg'),
-                          url('../Image/quoteapps.jpg');                      
+                          url('../Image/quoteapps.jpg');      
+        width: 125px;
+        padding-right: 303px;             
     }
 
     .project-quotesapp {
@@ -266,21 +268,19 @@
     }
 
     .github-demo {
-        width: 206px
+        width: 219px
     }
 
     .app-details {
         width: 140%;
     }
 
-    
-
     .marketplace {
         background-image: url('../Image/marketplace.jpg');
         background-size: contain;
         background-repeat: no-repeat;
         padding: 50px;
-        padding-right: 205px;
+        padding-right: 214px;
         padding-bottom: 100px;
         margin-bottom: 0;
         width: 70px
@@ -293,7 +293,7 @@
     .marketplace-demo {
         padding-left: 20px;
         padding-bottom: 10px;
-        width: 50px;
+        width: 60px;
     }
 
     .ecommerce-container {
@@ -301,8 +301,8 @@
     }
 
     .e-commerce {
-        width: 0px;
         background-size: contain;
+        
     }
 
     .ecommerce-details {
@@ -314,6 +314,12 @@
     }
 
     
+}
+
+@media screen and (min-width: 600px) and (max-width: 820px) {
+    .marketplace {
+       width: 87%
+    }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
@@ -337,7 +343,7 @@
     }
 
     .github-demo {
-        padding-right: 352px;
+        padding-right: 347px;
     }
 
     .app-details {
@@ -345,11 +351,12 @@
     }
 
     .ecommerce-container {
-        margin-left: -100px;
+        margin-left: -105px;
+        margin-top: 70px;
     }
 }
 
-@media screen and (min-width: .770px) and (max-width: 1000px) {
+@media screen and (min-width: 820px) and (max-width: 1000px) {
     .projects {
         margin-left: 110px;
     }
@@ -377,6 +384,10 @@
 
     .marketplace-demo {
         padding-right: 258px;
+    }
+
+    .ecommerce-container {
+        margin-left: 15px;
     }
 }
 

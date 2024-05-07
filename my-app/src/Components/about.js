@@ -2,7 +2,7 @@ import { Fade } from 'react-reveal';
 import { useState } from 'react';
 import '../CSS/about.css'
 
-function About() {
+function About({brightnessMode}) {
   const [isextended, setIsextended] = useState(false);
 
   const toggleExtend = () => {
@@ -46,7 +46,7 @@ function About() {
               explore unconventional solutions. This approach to software engineering has equipped me with a 
               versatile skill set, ready to tackle any challenge that comes my way.
             </p>
-            <button className='extend-button' onClick={toggleExtend}>{`${isextended ? 'SHOW LESS' : 'READ MORE'}`}</button>
+            <button className={`extend-button ${brightnessMode ? 'dark-mode' : ''}`}  onClick={toggleExtend}>{`${isextended ? 'SHOW LESS' : 'READ MORE...'}`}</button>
 
           </Fade>
           </div>

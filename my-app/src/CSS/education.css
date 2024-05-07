@@ -59,9 +59,14 @@
 
 @media screen and (min-width: 800px) and (max-width: 1300px) {
     .education-container {
-        padding-right: 100px;
+        padding-right: 50px;
         margin-left: 20px;
     }
+
+    .education-container li {
+        font-size: 18px;
+    }
+    
 }
 
 @media screen and (min-width: 701px) and (max-width: 799px) {
@@ -89,7 +94,7 @@
 @media screen and (max-width: 359px) {
     .education-container {
         margin-left: 15px;
-        width: 290px;
+        width: 300px;
     }
 
     .education-title {
