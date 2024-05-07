@@ -14,6 +14,7 @@ import darknessLogo from './Image/darkness-icon.png';
 import skillsLogo from './Image/skills-icon.png';
 import EducationDisplay from './Components/education';
 import educationIcon from './Image/education-icon.png';
+import myLogo from './Image/my-logo.png'
 
 function App() {
   const [brightnessMode, setBrightnessMode] = useState(false);
@@ -136,9 +137,12 @@ function App() {
       <div className={`App ${brightnessMode ? 'dark-mode' : ''}`} onMouseLeave={handleItemLeave}>
         <header className='App-header' onMouseLeave={handleItemLeave}>
           <div className='header-content'>
+            <a href='/' className={`home-link ${brightnessMode ? 'dark-mode' : ''}`}
+               onMouseEnter={() => handleItemHover('home')}>
+              <img src={myLogo} alt='Home' />
+            </a>
             <div className='about-profile' onMouseLeave={handleItemLeave} >
-              <a href='#home' className={`profile-link ${brightnessMode ? 'dark-mode' : ''}`}
-               onMouseEnter={() => handleItemHover('home')}>Home</a>
+              
               <a href='#projects' className={`profile-link ${brightnessMode ? 'dark-mode' : ''}`}
               onMouseEnter={() => handleItemHover('projects')}>Projects</a>
               <a href='#skills' className={`profile-link ${brightnessMode ? 'dark-mode' : ''}`}
