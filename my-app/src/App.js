@@ -230,13 +230,13 @@ function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
             <WhatsappLink />
           </div>
         </div>
-        <div className='display-i'>
         <div className='display-img'>
 
         </div>
+        <div id='about'>
         </div>
       </div>
-      <div id='about'>
+      <div>
         <About brightnessMode={brightnessMode} />
       </div>
       <div className='education-comp'>
@@ -246,7 +246,8 @@ function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
         </div>
         <EducationDisplay />
       </div>
-      <div className='skills' id='skills'>
+      <div id='skills'></div>
+      <div className='skills'>
         <Fade>
           <div className='icon-con'>
             <img src={skillsLogo} alt='icon' className='title-icon'/>
@@ -258,7 +259,8 @@ function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
           <DisplayLogo handleItemHover={handleItemHover} handleItemLeave={handleItemLeave} brightnessMode={brightnessMode} />
           </Fade>
         </div>
-        <div id='projects' className='projects'>
+        <div className='decoy' id='projects'></div>
+        <div id='projects'>
           <ProjectDisplay />
         </div>
       </div>
