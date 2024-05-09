@@ -36,9 +36,21 @@ function App() {
     setTouchMoved(true); // Set touchMoved state to true when touch move detected
   };
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e) => {
+    const touchMoved = e.changedTouches[0].clientX !== circlePosition.x || e.changedTouches[0].clientY !== circlePosition.y;
     if (!touchMoved) {
-      toggleMenu(); // Toggle menu only if there was no touch move
+      const touchedElement = e.target;
+      if (touchedElement.classList.contains('hamburger-menu')) {
+        toggleMenu();
+      }
+      if (touchedElement.classList.contains('brightnessMode')) {
+        toggleBrightness();
+      }
+      if (touchedElement.classList.contains('menu-item')) {
+        // Extract the section ID from the menu item's text content
+        const sectionId = touchedElement.textContent.toLowerCase();
+        scrollToSection(sectionId);
+      }
     }
   };
 
@@ -204,7 +216,7 @@ function App() {
 
         {/* Menu items */}
         <nav className={`menu ${menuOpen ? 'open' : ''} ${brightnessMode ? 'dark-mode' : ''}`} style={{ right: menuOpen ? '30px' : '-300px' }}>
-          <div onClick={() => scrollToSection('about')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>About</div>
+          <div onClick={() => scrollToSection('about')} onTouchEnd={() => scrollToSection('about')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>About</div>
           <div onClick={() => scrollToSection('skills')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Skills</div>
           <div onClick={() => scrollToSection('projects')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Projects</div>
         </nav>
@@ -237,7 +249,7 @@ function App() {
 export default App;
 
 function Homepage({ brightnessMode, handleItemHover, handleItemLeave,
-                    GithubLink, TwitterLink, InstagramLink, WhatsappLink, LinkedinLink }) {
+                    GithubLink, TwitterLink, InstagramLink, WhatsappLink, LinkedinLink}) {
   return (
     <div className={`Container ${brightnessMode ? 'dark-mode' : ''}`} id='home' onMouseLeave={handleItemLeave}>
       <div className={`slide-display ${brightnessMode ? 'dark-mode' : ''}`}>

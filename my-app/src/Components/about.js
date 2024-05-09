@@ -3,11 +3,18 @@ import { useState } from 'react';
 import '../CSS/about.css'
 
 function About({brightnessMode}) {
-  const [isextended, setIsextended] = useState(false);
+  const [isExtended, setIsextended] = useState(false);
 
-  const toggleExtend = () => {
-    setIsextended(!isextended)
+  const toggleExtend = () => { //pass this to the about component
+    setIsextended(!isExtended)
   }
+
+  const handleTouchEnd = (e) => {
+      const touchedElement = e.target;
+      if (touchedElement.classList.contains('extended-part')) {
+        toggleExtend();
+      }
+    }
     return (
         <div className='about' id='about'>
           <div className='detail'>
@@ -27,7 +34,7 @@ function About({brightnessMode}) {
             learning and a collaborative mindset, I thrive in dynamic environments where 
             innovation and creativity are valued.
             </p>
-            <p className={`extended-part ${isextended ? 'visible' : 'hidden'}`}>
+            <p className={`extended-part ${isExtended ? 'visible' : 'hidden'}`}>
               During my one-year software engineering program at Alx, I underwent intensive 
               training aimed at tackling challenging tasks. This experience has ingrained 
               in me the belief that overcoming difficulties is an integral part of everyday 
@@ -46,7 +53,7 @@ function About({brightnessMode}) {
               explore unconventional solutions. This approach to software engineering has equipped me with a 
               versatile skill set, ready to tackle any challenge that comes my way.
             </p>
-            <button className={`extend-button ${brightnessMode ? 'dark-mode' : ''}`}  onClick={toggleExtend}>{`${isextended ? 'SHOW LESS' : 'READ MORE...'}`}</button>
+            <button className={`extend-button ${brightnessMode ? 'dark-mode' : ''}`}  onClick={toggleExtend} onTouchEnd={handleTouchEnd}>{`${isExtended ? 'SHOW LESS' : 'READ MORE...'}`}</button>
 
           </Fade>
           </div>
