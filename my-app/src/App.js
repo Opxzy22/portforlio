@@ -14,7 +14,7 @@ import darknessLogo from './Image/darkness-icon.png';
 import skillsLogo from './Image/skills-icon.png';
 import EducationDisplay from './Components/education';
 import educationIcon from './Image/education-icon.png';
-import myLogo from './Image/my-logo.png'
+import myLogo from './Image/my-logo.png';
 import MarketplaceDemoVideo from './Components/marketplacedemo';
 
 function App() {
