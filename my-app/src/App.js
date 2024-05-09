@@ -22,10 +22,37 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [touchMoved, setTouchMoved] = useState(false); // Add touchMoved state
 
   const toggleMenu = () => {
     setMenuOpen((prevValue) => !prevValue);
   };
+
+  const handleTouchStart = () => {
+    setTouchMoved(false); // Reset touchMoved state
+  };
+
+  const handleTouchMove = () => {
+    setTouchMoved(true); // Set touchMoved state to true when touch move detected
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchMoved) {
+      toggleMenu(); // Toggle menu only if there was no touch move
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }); // Add touchMoved as a dependency
 
   const toggleBrightness = () => {
     setBrightnessMode(prevMode => !prevMode)
@@ -162,7 +189,7 @@ function App() {
             />
 
             {/* Menu toggle */}
-            <div className='hamburger-menu' onClick={toggleMenu}>
+            <div className='hamburger-menu' onClick={toggleMenu} onTouchEnd={handleTouchEnd}>
               <div className={`hamburger-bar ${brightnessMode ? 'dark-mode' : ''}`}></div>
               <div className={`hamburger-bar ${brightnessMode ? 'dark-mode' : ''}`}></div>
               <div className={`hamburger-bar ${brightnessMode ? 'dark-mode' : ''}`}></div>
