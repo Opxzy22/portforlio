@@ -22,19 +22,15 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [touchMoved, setTouchMoved] = useState(false); // Add touchMoved state
+
 
   const toggleMenu = () => {
     setMenuOpen((prevValue) => !prevValue);
   };
 
-  const handleTouchStart = () => {
-    setTouchMoved(false); // Reset touchMoved state
-  };
+  
 
-  const handleTouchMove = () => {
-    setTouchMoved(true); // Set touchMoved state to true when touch move detected
-  };
+ 
 
   const handleTouchEnd = (e) => {
     const touchMoved = e.changedTouches[0].clientX !== circlePosition.x || e.changedTouches[0].clientY !== circlePosition.y;
@@ -55,13 +51,9 @@ function App() {
   };
 
   useEffect(() => {
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchMove);
     document.addEventListener('touchend', handleTouchEnd);
 
     return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
       document.removeEventListener('touchend', handleTouchEnd);
     };
   }); // Add touchMoved as a dependency
