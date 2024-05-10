@@ -37,6 +37,11 @@ function App() {
     setBrightnessMode(prevMode => !prevMode)
   }
 
+  const homePath = () => {
+    // Navigate to the quotesapp route
+    window.location.href = '/';
+  };
+
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const hammer = new Hammer(hamburgerMenu);
     hammer.on('tap press', toggleMenu);
@@ -44,6 +49,10 @@ function App() {
     const brightnessElement = document.querySelector('.brightness-mode');
     const brightnessHammer = new Hammer(brightnessElement);
     brightnessHammer.on('tap press', toggleBrightness);
+
+    const homeLink = document.querySelector('.home-link')
+    const homeHammer = new Hammer(homeLink)
+    homeHammer.on('tap press', homePath)
 
     const handleMenuItemTouchEnd = (sectionId) => {
       // Scroll to the specified section
@@ -181,10 +190,10 @@ function App() {
       <div className={`App ${brightnessMode ? 'dark-mode' : ''}`} onMouseLeave={handleItemLeave}>
         <header className='App-header' onMouseLeave={handleItemLeave}>
           <div className='header-content'>
-            <a href='/' className={`home-link ${brightnessMode ? 'dark-mode' : ''}`}
+            <div className={`home-link ${brightnessMode ? 'dark-mode' : ''}`}
                onMouseEnter={() => handleItemHover('home')}>
               <img src={myLogo} alt='Home' />
-            </a>
+            </div>
             <div className='about-profile' onMouseLeave={handleItemLeave} >
               
               <a href='#projects' className={`profile-link ${brightnessMode ? 'dark-mode' : ''}`}

@@ -1,6 +1,7 @@
 import { Fade } from 'react-reveal';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../CSS/about.css'
+import Hammer from 'hammerjs';
 
 function About({brightnessMode}) {
   const [isExtended, setIsextended] = useState(false);
@@ -9,12 +10,11 @@ function About({brightnessMode}) {
     setIsextended(!isExtended)
   }
 
-  const handleTouchEnd = (e) => {
-      const touchedElement = e.target;
-      if (touchedElement.classList.contains('extended-part')) {
-        toggleExtend();
-      }
-    }
+  useEffect(() => {
+    const extendedButton = document.querySelector('.extended-button');
+    const hammer = new Hammer(extendedButton);
+    hammer.on('tap press', toggleExtend)
+  } )
     return (
         <div className='about' id='about'>
           <div className='detail'>
@@ -53,7 +53,9 @@ function About({brightnessMode}) {
               explore unconventional solutions. This approach to software engineering has equipped me with a 
               versatile skill set, ready to tackle any challenge that comes my way.
             </p>
-            <button className={`extend-button ${brightnessMode ? 'dark-mode' : ''}`}  onClick={toggleExtend} onTouchEnd={handleTouchEnd}>{`${isExtended ? 'SHOW LESS' : 'READ MORE...'}`}</button>
+            <div className='extended-button'>
+              <button className={`extend-button ${brightnessMode ? 'dark-mode' : ''}`}  >{`${isExtended ? 'SHOW LESS' : 'READ MORE...'}`}</button>
+            </div>
 
           </Fade>
           </div>

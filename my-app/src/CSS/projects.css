@@ -71,6 +71,14 @@
     align-content: flex-end;
 }
 
+.market-container {
+    display: flex;
+    width: 200px;
+    margin-left: -40px;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
 .github {
     margin-top: 0px;
     margin-left: -30px;
