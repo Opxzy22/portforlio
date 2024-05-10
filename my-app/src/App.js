@@ -16,6 +16,7 @@ import EducationDisplay from './Components/education';
 import educationIcon from './Image/education-icon.png';
 import myLogo from './Image/my-logo.png';
 import MarketplaceDemoVideo from './Components/marketplacedemo';
+import Hammer from 'hammerjs';
 
 function App() {
   const [brightnessMode, setBrightnessMode] = useState(false);
@@ -24,43 +25,48 @@ function App() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
 
-  const toggleMenu = () => {
-    setMenuOpen((prevValue) => !prevValue);
-  };
-
   
 
- 
-
-  const handleTouchEnd = (e) => {
-    const touchMoved = e.changedTouches[0].clientX !== circlePosition.x || e.changedTouches[0].clientY !== circlePosition.y;
-    if (!touchMoved) {
-      const touchedElement = e.target;
-      if (touchedElement.classList.contains('hamburger-menu')) {
-        toggleMenu();
-      }
-      if (touchedElement.classList.contains('brightnessMode')) {
-        toggleBrightness();
-      }
-      if (touchedElement.classList.contains('menu-item')) {
-        // Extract the section ID from the menu item's text content
-        const sectionId = touchedElement.textContent.toLowerCase();
-        scrollToSection(sectionId);
-      }
-    }
-  };
-
   useEffect(() => {
-    document.addEventListener('touchend', handleTouchEnd);
-
-    return () => {
-      document.removeEventListener('touchend', handleTouchEnd);
+    
+    const toggleMenu = () => {
+      setMenuOpen((prevValue) => !prevValue);
     };
-  }); // Add touchMoved as a dependency
 
-  const toggleBrightness = () => {
+    const toggleBrightness = () => {
     setBrightnessMode(prevMode => !prevMode)
   }
+
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const hammer = new Hammer(hamburgerMenu);
+    hammer.on('tap press', toggleMenu);
+
+    const brightnessElement = document.querySelector('.brightness-mode');
+    const brightnessHammer = new Hammer(brightnessElement);
+    brightnessHammer.on('tap press', toggleBrightness);
+
+    const handleMenuItemTouchEnd = (sectionId) => {
+      // Scroll to the specified section
+      scrollToSection(sectionId);
+    };
+
+    // Attach touch event listeners to menu items
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener('touchend', (event) => {
+        const sectionId = event.target.dataset.sectionId;
+        handleMenuItemTouchEnd(sectionId);
+      });
+    });
+
+    // Clean up event listeners
+    return () => {
+      menuItems.forEach((menuItem) => {
+        menuItem.removeEventListener('touchend', handleMenuItemTouchEnd);
+      });
+    };
+
+  }, []);
 
   const handleMouseMove = (e) => {
     setCirclePosition({ x: e.pageX, y: e.pageY });
@@ -90,9 +96,15 @@ function App() {
   };
 
   const scrollToSection = (sectionId) => {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    setMenuOpen(false); // Close the menu after scrolling
-  };
+    console.log(`Scrolling to section with id: ${sectionId}`);
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: 'smooth' });
+        setMenuOpen(false); // Close the menu after scrolling
+    } else {
+        console.error(`Element with id ${sectionId} not found.`);
+    }
+};
 
   const GithubLink = () => {
     return (
@@ -182,18 +194,21 @@ function App() {
               <a href='#about' className={`about-link ${brightnessMode ? 'dark-mode' : ''}`}
               onMouseEnter={() => handleItemHover('about')}>About</a>
             </div>
+
+            <div className='brightness-mode'>
             {/* Brightness toggle */}
             <img
               src={brightnessMode ? darknessLogo : brightnessLogo}
               alt='brightness logo'
               className={brightnessMode ? 'darkness-logo' : 'brightness-logo'}
-              onClick={toggleBrightness}
+            
               onMouseEnter={() => handleItemHover(`${brightnessMode ? 'dark mode' : 'brightness mode'}`)}
               onMouseLeave={handleItemLeave}
             />
+            </div>
 
             {/* Menu toggle */}
-            <div className='hamburger-menu' onClick={toggleMenu} onTouchEnd={handleTouchEnd}>
+            <div className='hamburger-menu'  >
               <div className={`hamburger-bar ${brightnessMode ? 'dark-mode' : ''}`}></div>
               <div className={`hamburger-bar ${brightnessMode ? 'dark-mode' : ''}`}></div>
               <div className={`hamburger-bar ${brightnessMode ? 'dark-mode' : ''}`}></div>
@@ -208,9 +223,9 @@ function App() {
 
         {/* Menu items */}
         <nav className={`menu ${menuOpen ? 'open' : ''} ${brightnessMode ? 'dark-mode' : ''}`} style={{ right: menuOpen ? '30px' : '-300px' }}>
-          <div onClick={() => scrollToSection('about')} onTouchEnd={() => scrollToSection('about')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>About</div>
-          <div onClick={() => scrollToSection('skills')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Skills</div>
-          <div onClick={() => scrollToSection('projects')} className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Projects</div>
+          <div data-section-id="about" className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>About</div>
+          <div data-section-id="skills" className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Skills</div>
+          <div data-section-id="projects" className={`menu-item ${brightnessMode ? 'dark-mode' : ''}`}>Projects</div>
         </nav>
 
         <Routes>
