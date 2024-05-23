@@ -19,20 +19,25 @@
     margin-bottom: -20px;
   }
 
-  .mypic {
-    padding: 30px;
-    margin-left: 0px;
-    padding-right: 200px;
+  .mypics {
     background-image: url('../Image/my-pics.png');
     padding-bottom: 200px;
     background-size: contain;
     background-position: center;
-    padding-bottom: 50px;
-    padding-top: 100px;
     background-repeat: no-repeat;
-    height: 130px;
-    margin-top: -10px;
+    height: 70px;
     border-radius: 5px;
+    width: 200px;
+    position: relative;
+    bottom: 60px
+  }
+
+  .box-shadow {
+    width: 192px;
+    height: 209px;
+    margin-bottom: -20px;
+    padding-top: -80px;
+    box-shadow: 0 4px 6px rgba(0.8, 0.8, 0.8, 0.8);
   }
 
   .extended-part.hidden {
@@ -93,10 +98,6 @@
         padding-bottom: 50px;
         padding-top: 10px;
         height: 200px;
-    }
-
-    .mypic {
-        display: none
     }
   }
 

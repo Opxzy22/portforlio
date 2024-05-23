@@ -20,8 +20,10 @@ function About({brightnessMode}) {
           <div className='detail'>
           <Fade>
           
-          <div className='mypics'>
+          <div className='box-shadow'>
+            <div className='mypics'>
 
+            </div>
           </div>
           <p className='my-name'>Hi, i'm Emmanuel</p>
           <p className='role'>I'm a dedicated full-stack software developer
