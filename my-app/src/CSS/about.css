@@ -23,7 +23,7 @@
     padding: 30px;
     margin-left: 0px;
     padding-right: 200px;
-    background-image: url('../Image/mypic.png');
+    background-image: url('../Image/my-pics.png');
     padding-bottom: 200px;
     background-size: contain;
     background-position: center;
@@ -31,7 +31,7 @@
     padding-top: 100px;
     background-repeat: no-repeat;
     height: 130px;
-    margin-top: 90px;
+    margin-top: -10px;
     border-radius: 5px;
   }
 
@@ -68,7 +68,7 @@
   @media screen and (max-width: 1300px) {
       .mypic {
         margin-left: 30px;
-        margin-top: 90px;
+        margin-top: 0px;
       }
   }
 
@@ -85,7 +85,7 @@
     .mypics {
         padding: 50px;
         padding-right: 200px;
-        background-image: url('../Image/mypic.png');
+        background-image: url('../Image/my-pics.png');
         padding-bottom: 200px;
         background-size: contain;
         background-position: center;
@@ -100,7 +100,7 @@
     }
   }
 
-  @media screen and (min-width: 767px) and (max-width: 768px) {
+  @media screen and (min-width: 767px) and (max-width: 1000px) {
     .detail {
         margin-left: 25px;
         width: 90%;
@@ -109,7 +109,7 @@
     .mypics {
         padding: 50px;
         padding-right: 200px;
-        background-image: url('../Image/mypic.png');
+        background-image: url('../Image/my-pics.png');
         padding-bottom: 200px;
         background-size: contain;
         background-position: center;
@@ -173,7 +173,7 @@
 
   @media screen and (min-width: 400px) and (max-width: 500px) {
     .mypics {
-      margin-left: -125px;
+      margin-left: -175px;
       margin-top: 20px;
     }
 
@@ -202,7 +202,7 @@
 
   @media screen and (max-width: 390px) {
     .mypics {
-      margin-left: -105px;
+      margin-left: -130px;
       margin-top: 15px;
     }
 
