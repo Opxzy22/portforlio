@@ -35,7 +35,7 @@
   .box-shadow {
     width: 192px;
     height: 209px;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
     padding-top: -80px;
     box-shadow: 0 4px 6px rgba(0.8, 0.8, 0.8, 0.8);
   }
