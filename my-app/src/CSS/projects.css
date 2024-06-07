@@ -134,14 +134,15 @@
 }
 
 .marketplace {
-    background-image: url('../Image/marketplace.jpg');
-    background-size: contain;
+    background-image: url('../Image/market.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 50px;
     padding-right: 305px;
     padding-bottom: 160px;
     margin-bottom: 0;
     width: 100px;
+    height: 25px;
 }
 
 .marketplace-demo {

@@ -34,10 +34,11 @@
 
   .box-shadow {
     width: 192px;
-    height: 209px;
+    height: 160px;
     margin-bottom: -10px;
     padding-top: -80px;
     box-shadow: 0 4px 6px rgba(0.8, 0.8, 0.8, 0.8);
+    overflow: hidden;
   }
 
   .extended-part.hidden {
